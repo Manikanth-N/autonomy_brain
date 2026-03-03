@@ -1,5 +1,4 @@
 from infrastructure.logger import logger
-from brain.system.guards import TransitionGuards
 
 class SystemManager:
     def __init__(self, state_machine, flags):
@@ -20,21 +19,17 @@ class SystemManager:
     def _execute_transition(self):
         tr = self._pending_transition
 
-        current_top, current_sub = self.state_machine.get_state()
-
-        if not TransitionGuards.is_allowed(
-            current_top,
-            current_sub,
-            tr.target_top,
-            tr.target_sub,
-        ):
-            logger.warning(
-                f"Illegal transition blocked: {current_sub} → {tr.target_sub}"
-            )
-            return
-
         logger.info(
-            f"Transitioning to {tr.target_top} - {tr.target_sub} | Reason: {tr.reason}"
+            f"Transition attempt: {tr.target_top} - {tr.target_sub} | Reason: {tr.reason}"
         )
 
-        self.state_machine.set_state(tr.target_top, tr.target_sub)
+        success = self.state_machine.set_state(tr.target_top, tr.target_sub)
+
+        if success:
+            logger.info(
+                f"Transition SUCCESS: {tr.target_top} - {tr.target_sub}"
+            )
+        else:
+            logger.warning(
+                f"Transition BLOCKED: {tr.target_top} - {tr.target_sub}"
+            )

@@ -14,4 +14,5 @@ class SubState(Enum):
     TAKEOFF = auto()
     MISSION = auto()
     LANDING = auto()
+    RTL = auto()
     EMERGENCY_LAND = auto()

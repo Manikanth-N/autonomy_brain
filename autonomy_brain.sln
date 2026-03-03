@@ -1,0 +1,47 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "venv", "venv", "{05F94FD3-B77B-E2F0-500B-568E6F852E0C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{32EFE0E7-BB31-3F3C-4587-6C0021A00D63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "python3.10", "python3.10", "{80642759-3DA9-4683-E300-BE6073AB51BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "site-packages", "site-packages", "{93FB3438-B000-2EBC-5787-62FE02607CB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pymavlink", "pymavlink", "{A54AA5A4-A395-19DC-89E1-63161A878284}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "generator", "generator", "{D22A354E-B6FA-B302-87AE-A5CC32FA086D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CS", "CS", "{EC13A80E-1ADD-8881-6D5A-6011D4969550}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAVLink", "venv\lib\python3.10\site-packages\pymavlink\generator\CS\MAVLink.csproj", "{E38B1C0A-E903-2366-3424-97FD9F770CB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E38B1C0A-E903-2366-3424-97FD9F770CB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E38B1C0A-E903-2366-3424-97FD9F770CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E38B1C0A-E903-2366-3424-97FD9F770CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E38B1C0A-E903-2366-3424-97FD9F770CB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{32EFE0E7-BB31-3F3C-4587-6C0021A00D63} = {05F94FD3-B77B-E2F0-500B-568E6F852E0C}
+		{80642759-3DA9-4683-E300-BE6073AB51BA} = {32EFE0E7-BB31-3F3C-4587-6C0021A00D63}
+		{93FB3438-B000-2EBC-5787-62FE02607CB1} = {80642759-3DA9-4683-E300-BE6073AB51BA}
+		{A54AA5A4-A395-19DC-89E1-63161A878284} = {93FB3438-B000-2EBC-5787-62FE02607CB1}
+		{D22A354E-B6FA-B302-87AE-A5CC32FA086D} = {A54AA5A4-A395-19DC-89E1-63161A878284}
+		{EC13A80E-1ADD-8881-6D5A-6011D4969550} = {D22A354E-B6FA-B302-87AE-A5CC32FA086D}
+		{E38B1C0A-E903-2366-3424-97FD9F770CB3} = {EC13A80E-1ADD-8881-6D5A-6011D4969550}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3977FC7-18E9-4009-ABB7-260C5859B25A}
+	EndGlobalSection
+EndGlobal
